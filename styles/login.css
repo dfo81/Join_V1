@@ -1,0 +1,215 @@
+/* logo animation */
+.logo-wrapper {
+    height: 100%;
+    max-height: 1024px;
+    width: 100%;
+    max-width: 1440px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveLogo 0.35s ease-in-out forwards;
+}
+
+@keyframes moveLogo{
+    to {
+        top: 0;
+        left: 0;
+        scale: 0.36;
+    }
+}
+
+/* main box */
+main {
+    opacity: 0;
+    pointer-events: none;
+    animation: opacity 0.25s ease-in-out forwards;
+    animation-delay: 0.35s;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 1024px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes opacity{
+    to {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* sign up button */
+.sign-up-button-box {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 67px 122px;
+    gap: 35px;
+}
+
+.sign-up-button-box span {
+    font-size: 20px;
+}
+
+.sign-up-button-box button {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.sign-up-button-box button:hover {
+    background-color: var(--light-blue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.sign-up-button-box button:active {
+    background-color: var(--highlight);
+}
+
+/* login form */
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    height: 449px;
+    width: 652px;
+    box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+ /* title */
+.login-title {
+    font-size: 61px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-border {
+    background-color: var(--light-blue);
+    height: 3px;
+    width: 150px;
+    margin-top: 16px;
+}
+
+/* inputs */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 422px;height: 152px;
+}
+
+.input-box {
+    border: 1px solid var(--style);
+    display: flex;
+    align-items: center;
+    padding: 12px 21px;
+    border-radius: 10px;
+}
+
+.input-box:hover, .input-box:focus-within {
+    border-color: var(--light-blue);
+}
+
+input {
+    border: none;
+    width: 100%;
+    font-size: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* login buttons */
+.login-button-box {
+    display: flex;
+    gap: 35px;
+}
+
+.login-button {
+    padding: 15px 24px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    background-color: var(--main-color);
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.login-button:hover {
+    background-color: var(--light-blue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.login-button:active {
+    background-color: var(--highlight);
+}
+
+.guest-login-button {
+    background-color: white;
+    font-size: 20px;
+    color: var(--main-color);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px 24px;
+}
+
+.guest-login-button:hover {
+    border-color: var(--light-blue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: var(--light-blue);
+}
+
+.guest-login-button:active {
+    border-color: var(--highlight);
+    color: var(--highlight);
+}
+
+/* lilnks */
+.links-box {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 40px;
+}
+
+.links-box a {
+    padding: 8px;
+    text-decoration: none;
+    color: var(--icon);
+    transition: 125ms;
+}
+
+.links-box a:hover {
+    color: var(--light-blue);
+}
