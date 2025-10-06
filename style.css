@@ -15,6 +15,7 @@
     --light-blue: #29ABE2;
     --style: #D1D1D1;
     --highlight: #091931;
+    --error-color: #E60026;
 }
 
 body {
@@ -28,4 +29,45 @@ body {
     width: 100vw;
     background-color: var(--background);
     font-family: inter;
+}
+
+.dark-button {
+    padding: 15px 24px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    background-color: var(--main-color);
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.dark-button:hover {
+    background-color: var(--light-blue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.dark-button:active {
+    background-color: var(--highlight);
+}
+
+.light-button {
+    background-color: white;
+    font-size: 20px;
+    color: var(--main-color);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px 24px;
+}
+
+.light-button:hover {
+    border-color: var(--light-blue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: var(--light-blue);
+}
+
+.light-button:active {
+    border-color: var(--highlight);
+    color: var(--highlight);
 }
