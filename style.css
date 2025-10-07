@@ -71,3 +71,7 @@ body {
     border-color: var(--highlight);
     color: var(--highlight);
 }
+
+.d-none {
+    display: none !important;
+}
