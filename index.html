@@ -18,7 +18,7 @@
       <img class="logo" src="./assets/icons/logo.svg" alt="logo" />
     </div>
     <main>
-      <div class="sign-up-button-box">
+      <div class="signup-button-box">
         <span>Not a Join user?</span>
         <button onclick="showSignupForm()">Sign up</button>
       </div>
@@ -49,6 +49,7 @@
         </div>
         <!-- Sign up form -->
         <div class="signup-box d-none">
+          <img id="back-arrow" src="./assets/icons/login/back_arrow.svg" alt="back arrow">
           <div class="form-title">
             Sign-up
             <div class="title-border"></div>
@@ -74,16 +75,16 @@
               <div class="error-message"></div>
             </div>
             <div class="confirm-box">
-              <img src="./assets/icons/login/check_unchecked.svg" alt="check" />
-              <span>I accept the <a href="#">Privacy Policy</a></span>
+              <img class="confirm" src="./assets/icons/login/check_unchecked.svg" alt="check" />
+              <span class="link">I accept the <a href="#">Privacy Policy</a></span>
             </div>
             <div class="button-box">
-              <button class="dark-button" onclick="login()">sign up</button>
+              <button class="dark-button" onclick="signup()">sign up</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="links-box">
+      <div class="links-box link">
         <a href="#">Pricacy Policy</a>
         <a href="#">Legal Notice</a>
       </div>

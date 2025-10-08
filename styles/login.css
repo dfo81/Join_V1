@@ -21,9 +21,9 @@
 
 @keyframes moveLogo{
     to {
-        top: 0;
-        left: 0;
-        scale: 0.36;
+        top: 30px;
+        left: 30px;
+        scale:0.365;
     }
 }
 
@@ -33,14 +33,12 @@ main {
     pointer-events: none;
     animation: opacity 0.25s ease-in-out forwards;
     animation-delay: 0.75s;
-    display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 1440px;
     height: 100%;
     max-height: 1024px;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 }
 
 @keyframes opacity{
@@ -51,21 +49,20 @@ main {
 }
 
 /* sign up button */
-.sign-up-button-box {
-    box-sizing: border-box;
-    width: 100%;
+.signup-button-box {
+    position: absolute;
+    top: 67px;
+    right: 122px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding: 67px 122px;
     gap: 35px;
 }
 
-.sign-up-button-box span {
+.signup-button-box span {
     font-size: 20px;
 }
 
-.sign-up-button-box button {
+.signup-button-box button {
     font-size: 16px;
     font-weight: 700;
     padding: 15px 16px;
@@ -77,12 +74,12 @@ main {
     transition: 125ms;
 }
 
-.sign-up-button-box button:hover {
+.signup-button-box button:hover {
     background-color: var(--light-blue);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.sign-up-button-box button:active {
+.signup-button-box button:active {
     background-color: var(--highlight);
 }
 
@@ -165,6 +162,7 @@ input:focus {
 .input-error-box {
     display: flex;
     flex-direction: column;
+    height: 68px;
     gap: 8px;
 }
 
@@ -181,20 +179,39 @@ input:focus {
     gap: 10px;
 }
 
-/* lilnks */
-.links-box {
-    display: flex;
-    gap: 8px;
-    padding-bottom: 40px;
+.confirm:hover {
+    cursor: pointer;
+    content: url(../assets/icons/login/hover_unchecked.svg);
 }
 
-.links-box a {
+#back-arrow {
+    position: absolute;
+    top: 64px;
+    left: 48px;
+    cursor: pointer;;
+}
+
+#back-arrow:hover {
+    content: url(../assets/icons/login/back_hover.svg);
+}
+
+/* lilnks */
+.links-box {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.link a {
     padding: 8px;
     text-decoration: none;
     color: var(--icon);
     transition: 125ms;
 }
 
-.links-box a:hover {
+.link a:hover {
     color: var(--light-blue);
 }
